@@ -8,6 +8,9 @@ public class Calculate {
         this.diameter = diameter;
         this.jarijari = jarijari;
         this.perintah = perintah;
+        if (jarijari == 0) {
+            this.jarijari = diameterToJarijari();
+        }
     }
 
     public double diameterToJarijari() {
