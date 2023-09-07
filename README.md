@@ -13,7 +13,7 @@ Hihiba (short for "hitung hitung bangun") is a simple Android app written in Jav
 
 ## Installation
 
-You can install Hihiba on your Android device by downloading the APK file from the [Releases](https://github.com/kimiginting/hibiba/releases) page and then following these steps:
+You can install Hihiba on your Android device by downloading the APK file from the [Releases](https://github.com/kimiginting/HiHiBa/releases) page and then following these steps:
 
 1. Enable installation from unknown sources in your Android device's settings.
 2. Locate the downloaded APK file and tap on it to start the installation process.
