@@ -9,7 +9,7 @@ Hihiba (short for "hitung hitung bangun") is a simple Android app written in Jav
 
 ## Screenshots
 
-![Screenshot 1](/screenshots/screenshot1.png)
+![Screenshot 1](/screenshots/screenshots1.jpeg)
 
 ## Installation
 
