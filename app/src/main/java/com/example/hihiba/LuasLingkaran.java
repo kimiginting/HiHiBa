@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
 public class LuasLingkaran extends AppCompatActivity {
     EditText diameterEdit, jarijariEdit;
     Button hitung, back, reset;
@@ -65,6 +67,7 @@ public class LuasLingkaran extends AppCompatActivity {
             public void onClick(View view) {
                 diameterEdit.setText("");
                 jarijariEdit.setText("");
+                TextView resu = (TextView) findViewById(R.id.resu);
                 resu.setText("");
             }
         });
@@ -87,9 +90,13 @@ public class LuasLingkaran extends AppCompatActivity {
                 jarijari = 0;
                 // check diameter and jari jari is empty
                 if (diameterEdit.getText().toString().isEmpty()) {
-                    jarijari = Double.parseDouble(jarijariEdit.getText().toString());
+                    if (!jarijariEdit.getText().toString().isEmpty()) {
+                        jarijari = Double.parseDouble(jarijariEdit.getText().toString());
+                    }
                 } else {
-                    diameter = Double.parseDouble(diameterEdit.getText().toString());
+                    if (!diameterEdit.getText().toString().isEmpty()) {
+                        diameter = Double.parseDouble(diameterEdit.getText().toString());
+                    }
                 }
 
                 Calculate calculate = new Calculate(diameter, jarijari, "luas");
