@@ -92,10 +92,18 @@ public class KelilingLingkaran extends AppCompatActivity {
                 // check diameter and jari jari is empty
                 if (editDiameter.getText().toString().isEmpty()) {
                     if (!editJari.getText().toString().isEmpty()) {
-                        jarijari = Double.parseDouble(editJari.getText().toString());
+                        if (!editJari.getText().toString().matches("[0-9]+")) {
+                            editJari.setError("Masukkan angka");
+                            return;
+                        } else {
+                            jarijari = Double.parseDouble(editJari.getText().toString());
+                        }
                     }
                 } else {
-                    if (!editDiameter.getText().toString().isEmpty()) {
+                    if (!editDiameter.getText().toString().matches("[0-9]+")) {
+                        editDiameter.setError("Masukkan angka");
+                        return;
+                    } else {
                         diameter = Double.parseDouble(editDiameter.getText().toString());
                     }
                 }

@@ -91,11 +91,22 @@ public class LuasLingkaran extends AppCompatActivity {
                 // check diameter and jari jari is empty
                 if (diameterEdit.getText().toString().isEmpty()) {
                     if (!jarijariEdit.getText().toString().isEmpty()) {
-                        jarijari = Double.parseDouble(jarijariEdit.getText().toString());
+                        // if not number
+                        if (!jarijariEdit.getText().toString().matches("[0-9]+")) {
+                            jarijariEdit.setError("Masukkan angka");
+                            return;
+                        } else {
+                            jarijari = Double.parseDouble(jarijariEdit.getText().toString());
+                        }
                     }
                 } else {
                     if (!diameterEdit.getText().toString().isEmpty()) {
-                        diameter = Double.parseDouble(diameterEdit.getText().toString());
+                        if (!diameterEdit.getText().toString().matches("[0-9]+")) {
+                            diameterEdit.setError("Masukkan angka");
+                            return;
+                        } else {
+                            diameter = Double.parseDouble(diameterEdit.getText().toString());
+                        }
                     }
                 }
 
