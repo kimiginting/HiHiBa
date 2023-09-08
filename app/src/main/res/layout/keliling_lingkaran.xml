@@ -1,62 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="372dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="324dp"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="97dp"
         android:backgroundTint="#952323"
         android:text="Back"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editJari"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
         android:text="Menghitung Keliling Lingkaran"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="30dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/editJari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Masukkan Jari-jari"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="161dp" />
+        android:hint="Masukkan Jari-jari"
+        app:layout_constraintBottom_toTopOf="@+id/editDiameter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnHitung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="403dp"
         android:backgroundTint="#82A6CB"
         android:text="HITUNG"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="280dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnHapus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDiameter" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnHapus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="403dp"
         android:backgroundTint="#82A6CB"
         android:text="HAPUS"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="280dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnHitung"
+        app:layout_constraintTop_toBottomOf="@+id/editDiameter" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/editDiameter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="101dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Masukkan Diameter"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="224dp" />
+        android:hint="Masukkan Diameter"
+        app:layout_constraintBottom_toTopOf="@+id/btnHitung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editJari" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
